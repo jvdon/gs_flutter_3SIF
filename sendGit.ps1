@@ -16,7 +16,6 @@ if($opt -like "[y|Y]"){
 echo "Comminting with message #> $dt" 
 
 git commit -m $dt
-git push -u github master
-
+git push -u github dev
 
 flutter pub get
