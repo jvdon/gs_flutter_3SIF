@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:gs_flutter/database/db.dart';
 import 'package:gs_flutter/drone.dart';
+import 'package:gs_flutter/drone_view.dart';
+import 'package:gs_flutter/image_gallery.dart';
 import 'package:ionicons/ionicons.dart';
 
 import 'package:latlong2/latlong.dart';
@@ -20,12 +22,40 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     List<Drone> drones = Database.drones;
     return Column(
-      
       children: [
         Expanded(
           flex: 6,
           child: Row(
-            children: [],
+            children: [
+              Expanded(
+                flex: 4,
+                child: ListView.builder(
+                  itemCount: drones.length,
+                  itemBuilder: (context, index) {
+                    Drone drone = drones[index];
+                    return ListTile(
+                      leading: Icon(
+                        Icons.online_prediction,
+                        color: drone.online ? Colors.green : Colors.red,
+                      ),
+                      title: Text("Drone #${drone.id}"),
+                      subtitle: Text(drone.position.toString()),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return DroneView(
+                                drone: drone,
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ),
         Expanded(

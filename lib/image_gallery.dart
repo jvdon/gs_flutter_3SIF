@@ -27,7 +27,7 @@ class _Image_GalleryState extends State<Image_Gallery> {
         return Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Text("Drone - ${drones[index].id}"),
+            Text("Drone #${drones[index].id}"),
             Container(
               height: 250,
               child: GridView.builder(

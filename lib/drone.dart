@@ -7,7 +7,7 @@ class Drone {
 
   List<DroneImage> images = [];
 
-  bool? online = true;
+  bool online = true;
 
-  Drone({required this.id, required this.position, required this.images, this.online});
+  Drone({required this.id, required this.position, required this.images, this.online = true});
 }
