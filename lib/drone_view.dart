@@ -38,20 +38,17 @@ class _DroneViewState extends State<DroneView> {
             itemBuilder: (context, index) {
               DroneImage image = widget.drone.images[index];
               return InkWell(
-                    child: Column(
-                      children: [
-                        image.image,
-                        Text(image.ID)
-                      ],
-                    ),
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return ImageView(image: image);
-                        },
-                      ),
-                    ),
-                  );
+                child: Column(
+                  children: [image.image, Text(image.ID)],
+                ),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ImageView(image: image);
+                    },
+                  ),
+                ),
+              );
             },
           ))
         ],

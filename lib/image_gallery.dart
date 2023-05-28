@@ -40,10 +40,7 @@ class _Image_GalleryState extends State<Image_Gallery> {
                   DroneImage image = images[index];
                   return InkWell(
                     child: Column(
-                      children: [
-                        image.image,
-                        Text(image.ID)
-                      ],
+                      children: [image.image, Text(image.ID)],
                     ),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
@@ -60,33 +57,5 @@ class _Image_GalleryState extends State<Image_Gallery> {
         );
       },
     );
-
-    //   return GridView.builder(
-    //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    //       crossAxisCount: 5,
-    //       crossAxisSpacing: 5,
-    //       mainAxisSpacing: 5,
-    //     ),
-    //     itemCount: 5,
-    //     itemBuilder: (context, index) {
-    //       return GridTile(
-    //         footer: Center(child: Text(index.toString())),
-    //         child: InkWell(
-    //           child: Placeholder(),
-    //           onTap: () {
-    //             Navigator.of(context).push(
-    //               MaterialPageRoute(
-    //                 builder: (context) {
-    //                   return ImageView(
-    //                     image: DroneImage(),
-    //                   );
-    //                 },
-    //               ),
-    //             );
-    //           },
-    //         ),
-    //       );
-    //     },
-    //   );
   }
 }

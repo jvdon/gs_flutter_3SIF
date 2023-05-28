@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:gs_flutter/drone.dart';
 import 'package:gs_flutter/drone_image.dart';
+import 'package:gs_flutter/history.dart';
 
 import 'package:latlong2/latlong.dart';
 
@@ -54,5 +57,20 @@ abstract class Database {
                 "https://cdn.pixabay.com/photo/2014/01/22/19/44/flower-field-250016_1280.jpg"),
           ))
     ]),
+  ];
+
+  static List<History> historic = [
+    History(
+        title: "Hello World",
+        desc: "This is America",
+        dateTime: DateTime.parse("2023-04-10")),
+    History(
+        title: "Mein App",
+        desc: "My App",
+        dateTime: DateTime.parse("2023-11-23")),
+    History(
+        title: "Meiniercraft",
+        desc: "Minecraft",
+        dateTime: DateTime.parse("2023-05-12")),
   ];
 }

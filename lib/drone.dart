@@ -9,5 +9,9 @@ class Drone {
 
   bool online = true;
 
-  Drone({required this.id, required this.position, required this.images, this.online = true});
+  Drone(
+      {required this.id,
+      required this.position,
+      required this.images,
+      this.online = true});
 }

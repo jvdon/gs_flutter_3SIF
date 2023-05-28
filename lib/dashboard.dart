@@ -27,6 +27,7 @@ class _DashboardState extends State<Dashboard> {
           flex: 6,
           child: Row(
             children: [
+              // Drones
               Expanded(
                 flex: 4,
                 child: ListView.builder(
@@ -54,10 +55,11 @@ class _DashboardState extends State<Dashboard> {
                     );
                   },
                 ),
-              ),
+              )
             ],
           ),
         ),
+        // Map
         Expanded(
           flex: 4,
           child: FlutterMap(
@@ -69,19 +71,23 @@ class _DashboardState extends State<Dashboard> {
                 userAgentPackageName: 'com.zeyk.Gs',
               ),
               MarkerLayer(
-                markers: List.generate(drones.length, (index) {
-                  Drone drone = drones[index];
-                  return Marker(
-                    point: LatLng(
-                      -23 + drone.position.latitude,
-                      -46 + drone.position.longitude,
-                    ),
-                    width: 80,
-                    height: 80,
-                    builder: (context) => Icon(Icons.airplanemode_active),
-                    rotate: true,
-                  );
-                }),
+                markers: List.generate(
+                  drones.length,
+                  (index) {
+                    Drone drone = drones[index];
+                    return Marker(
+                      point: LatLng(
+                        -23 + drone.position.latitude,
+                        -46 + drone.position.longitude,
+                      ),
+                      width: 80,
+                      height: 80,
+                      builder: (context) =>
+                          const Icon(Icons.airplanemode_active),
+                      rotate: true,
+                    );
+                  },
+                ),
               ),
             ],
           ),

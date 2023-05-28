@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gs_flutter/dashboard.dart';
+import 'package:gs_flutter/historic.dart';
 import 'package:gs_flutter/image_gallery.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int currentIndex = 0;
 
-  final List<Widget> _telas = [Dashboard(), Image_Gallery(), Placeholder()];
+  final List<Widget> _telas = [Dashboard(), Image_Gallery(), Historic()];
 
   // This widget is the root of your application.
   @override
