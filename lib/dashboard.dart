@@ -40,7 +40,9 @@ class _DashboardState extends State<Dashboard> {
                         color: drone.online ? Colors.green : Colors.red,
                       ),
                       title: Text("Drone #${drone.id}"),
-                      subtitle: Text(drone.position.toString()),
+                      subtitle: Text(
+                        "${drone.position.latitude} - ${drone.position.longitude}",
+                      ),
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
@@ -77,8 +79,8 @@ class _DashboardState extends State<Dashboard> {
                     Drone drone = drones[index];
                     return Marker(
                       point: LatLng(
-                        -23 + drone.position.latitude,
-                        -46 + drone.position.longitude,
+                        drone.position.latitude,
+                        drone.position.longitude,
                       ),
                       width: 80,
                       height: 80,

@@ -26,31 +26,42 @@ class _DroneViewState extends State<DroneView> {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(20),
-            child: Text("Drone #${widget.drone.id}"),
+            padding: EdgeInsets.all(5),
+            child: Text(
+              "Drone #${widget.drone.id}",
+              style: TextStyle(fontSize: 32),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(5),
+            child: Text(
+              "Position: ${widget.drone.position.latitude} - ${widget.drone.position.longitude}",
+              style: TextStyle(fontSize: 24),
+            ),
           ),
           Expanded(
-              child: GridView.builder(
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-            itemCount: widget.drone.images.length,
-            padding: EdgeInsets.all(10),
-            itemBuilder: (context, index) {
-              DroneImage image = widget.drone.images[index];
-              return InkWell(
-                child: Column(
-                  children: [image.image, Text(image.ID)],
-                ),
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return ImageView(image: image);
-                    },
+            child: GridView.builder(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemCount: widget.drone.images.length,
+              padding: EdgeInsets.all(10),
+              itemBuilder: (context, index) {
+                DroneImage image = widget.drone.images[index];
+                return InkWell(
+                  child: Column(
+                    children: [image.image, Text(image.ID)],
                   ),
-                ),
-              );
-            },
-          ))
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ImageView(image: image);
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
