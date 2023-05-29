@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.dashboard_outlined), label: "Dashboard"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.photo_album_outlined), label: "Gallery"),
+                icon: Icon(Icons.photo_album_outlined), label: "Galeria"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.history), label: "Histórico")
           ],
