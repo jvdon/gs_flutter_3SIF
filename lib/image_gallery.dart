@@ -33,7 +33,7 @@ class _Image_GalleryState extends State<Image_Gallery> {
               child: GridView.builder(
                 padding: EdgeInsets.all(5),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 2,
                   crossAxisSpacing: 5,
                 ),
                 itemCount: images.length,
