@@ -39,7 +39,7 @@ class _DashboardState extends State<Dashboard> {
                         Icons.online_prediction,
                         color: drone.online ? Colors.green : Colors.red,
                       ),
-                      title: Text("Drone #${drone.id}"),
+                      title: Text("Drone #${drone.id} - ${drone.crop}"),
                       subtitle: Text(
                         "${drone.position.latitude} - ${drone.position.longitude}",
                       ),
@@ -66,7 +66,7 @@ class _DashboardState extends State<Dashboard> {
           flex: 4,
           child: FlutterMap(
             options:
-                MapOptions(center: LatLng(-23.533773, -46.625290), zoom: 4),
+                MapOptions(center: LatLng(-14.2400732, -53.1805017), zoom: 4),
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',

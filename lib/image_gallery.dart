@@ -33,9 +33,10 @@ class _Image_GalleryState extends State<Image_Gallery> {
               child: GridView.builder(
                 padding: EdgeInsets.all(5),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 1,
                   crossAxisSpacing: 5,
                 ),
+                scrollDirection: Axis.horizontal,
                 itemCount: images.length,
                 itemBuilder: (context, index) {
                   DroneImage image = images[index];
