@@ -66,7 +66,7 @@ class _DashboardState extends State<Dashboard> {
           flex: 4,
           child: FlutterMap(
             options:
-                MapOptions(center: LatLng(-23.533773, -46.625290), zoom: 8),
+                MapOptions(center: LatLng(-23.533773, -46.625290), zoom: 4),
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -84,8 +84,7 @@ class _DashboardState extends State<Dashboard> {
                       ),
                       width: 80,
                       height: 80,
-                      builder: (context) =>
-                          const Icon(Icons.airplanemode_active),
+                      builder: (context) => Icon(Icons.airplanemode_active),
                       rotate: true,
                     );
                   },

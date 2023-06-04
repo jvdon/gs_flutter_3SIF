@@ -35,14 +35,17 @@ class _DroneViewState extends State<DroneView> {
           Padding(
             padding: EdgeInsets.all(5),
             child: Text(
-              "Position: ${widget.drone.position.latitude} - ${widget.drone.position.longitude}",
+              "Cultivo: ${widget.drone.crop}",
               style: TextStyle(fontSize: 24),
             ),
           ),
           Expanded(
             child: GridView.builder(
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 5,
+                mainAxisSpacing: 5
+              ),
               itemCount: widget.drone.images.length,
               padding: EdgeInsets.all(10),
               itemBuilder: (context, index) {

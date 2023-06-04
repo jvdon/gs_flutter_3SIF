@@ -29,13 +29,14 @@ class _Image_GalleryState extends State<Image_Gallery> {
           children: [
             Text("Drone #${drones[index].id}"),
             Container(
-              height: 250,
+              height: 300,
               child: GridView.builder(
                 padding: EdgeInsets.all(5),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, crossAxisSpacing: 5),
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 5,
+                ),
                 itemCount: images.length,
-                scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   DroneImage image = images[index];
                   return InkWell(

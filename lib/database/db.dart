@@ -4,41 +4,50 @@ import 'package:flutter/material.dart';
 import 'package:gs_flutter/drone.dart';
 import 'package:gs_flutter/drone_image.dart';
 import 'package:gs_flutter/history.dart';
+import 'package:gs_flutter/soil.dart';
 
 import 'package:latlong2/latlong.dart';
 
 abstract class Database {
   static List<Drone> drones = [
-    Drone(id: 1, position: LatLng(-21.0239, -47.3727), images: [
-      DroneImage(
-          ID: "ID2147",
+    Drone(
+      id: 1,
+      crop: "Trigo",
+      position: LatLng(-20.4435, -54.6478),
+      images: [
+        DroneImage(
+          ID: "ID2054",
+          soildData: Soil(wind: 20, UV: 5, temperature: 30, humidity: 0.8),
           image: Image.network(
-              "https://www.netafimusa.com/48da28/globalassets/demo/products-and-solutions/open-fields/open_fields_headvisual-graded.jpg?height=0&width=750&mode=crop&quality=80"))
-    ]),
-    Drone(id: 2, position: LatLng(-20.1913, -47.7051), images: [
-      DroneImage(
-          ID: "ID2047",
+            "https://images.unsplash.com/photo-1595976281013-8024ecc02575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdoZWF0JTIwZmllbGR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+          ),
+        ),
+        DroneImage(
+          ID: "ID2054",
+          soildData: Soil(
+            wind: 10,
+            UV: 8,
+            temperature: 35,
+            humidity: 0.3,
+          ),
           image: Image.network(
-              "https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg"))
-    ]),
-    Drone(id: 3, position: LatLng(-21.2753, -47.3048), images: [
-      DroneImage(
-          ID: "ID2147",
+            "https://media.istockphoto.com/id/1253113677/photo/burnt-field-of-wheat.jpg?s=612x612&w=0&k=20&c=EV1D_LlUKJpt31puiDdRuJI0AlZ_ENQV0m8mo5iRf5o=",
+          ),
+        ),
+        DroneImage(
+          ID: "ID2054",
+          soildData: Soil(
+            wind: 35,
+            UV: 5,
+            temperature: 25,
+            humidity: 0.8,
+          ),
           image: Image.network(
-              "https://balchem.com/plant-nutrition/wp-content/uploads/sites/4/2021/02/Balchem-plant-nutrition-field-crops-how-we-serve-this-market-850x570.jpg"))
-    ]),
-    Drone(id: 4, position: LatLng(-46, -27), images: [
-      DroneImage(
-          ID: "ID4627",
-          image: Image.network(
-              "https://media.istockphoto.com/id/965148388/pt/foto/green-ripening-soybean-field-agricultural-landscape.jpg?s=612x612&w=0&k=20&c=Y11IEwuSunVWEYjVraLd8wvrObeRes6v5lzCvVJRZRc="))
-    ]),
-    Drone(id: 5, position: LatLng(-40, -26), images: [
-      DroneImage(
-          ID: "ID4026",
-          image: Image.network(
-              "https://www.ndsu.edu/agriculture/sites/default/files/styles/784x424/public/2021-06/soybean-field.jpg?h=5a8f14a3&itok=in1uve7F"))
-    ]),
+            "https://thumbs.dreamstime.com/b/windswept-field-motion-wheat-being-moved-high-chinook-winds-71647562.jpg",
+          ),
+        ),
+      ],
+    ),
   ];
 
   static List<History> historic = [
