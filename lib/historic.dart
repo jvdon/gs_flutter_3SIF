@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:gs_flutter/database/db.dart';
 import 'package:gs_flutter/history.dart';
 
@@ -22,17 +21,20 @@ class _HistoricState extends State<Historic> {
         History item = historic[index];
         return ListTile(
           contentPadding: const EdgeInsets.all(5),
-          title: Text(item.title),
-          subtitle: Text(item.desc),
-          leading: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "${item.dateTime!.day.toString()}/${item.dateTime!.month.toString()}",
-                style: const TextStyle(fontSize: 20),
-              ),
-            ],
+          title: Text(
+            item.title,
+            style: GoogleFonts.poppins(),
+          ),
+          subtitle: Text(
+            item.desc,
+            style: GoogleFonts.poppins(),
+          ),
+          leading: CircleAvatar(
+            child: Text(
+              "${item.dateTime!.day.toString()}/${item.dateTime!.month.toString()}",
+              style: GoogleFonts.roboto(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
           ),
         );
       },

@@ -1,12 +1,10 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:gs_flutter/database/db.dart';
 import 'package:gs_flutter/drone.dart';
 import 'package:gs_flutter/drone_view.dart';
-import 'package:gs_flutter/image_gallery.dart';
-import 'package:ionicons/ionicons.dart';
 
 import 'package:latlong2/latlong.dart';
 
@@ -82,9 +80,17 @@ class _DashboardState extends State<Dashboard> {
                         drone.position.latitude,
                         drone.position.longitude,
                       ),
-                      width: 80,
-                      height: 80,
-                      builder: (context) => Icon(Icons.airplanemode_active),
+                      width: 40,
+                      height: 40,
+                      builder: (context) => Wrap(
+                        alignment: WrapAlignment.center,
+                        crossAxisAlignment: WrapCrossAlignment.start,
+                        verticalDirection: VerticalDirection.down,
+                        children: [
+                          Icon(Icons.location_on, color: Colors.deepPurple,),
+                          Text("${drone.id.toString()}"),
+                        ],
+                      ),
                       rotate: true,
                     );
                   },

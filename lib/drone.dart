@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:gs_flutter/drone_image.dart';
 import 'package:latlong2/latlong.dart';
 

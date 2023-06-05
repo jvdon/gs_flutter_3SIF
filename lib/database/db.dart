@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
 import 'package:gs_flutter/drone.dart';
@@ -176,7 +176,7 @@ abstract class Database {
 
   static List<History> historic = [
     History(
-        title: "Image taken! waiting processing",
+        title: "Image taken! Waiting processing",
         desc: "Drone #5 - Condition abnormal",
         dateTime: DateTime.parse("2023-04-11")),
     History(
@@ -184,7 +184,7 @@ abstract class Database {
         desc: "Crop: Milho",
         dateTime: DateTime.parse("2023-04-10")),
     History(
-        title: "Image taken! waiting processing",
+        title: "Image taken! Waiting processing",
         desc: "Drone #3 - Conditions nominal",
         dateTime: DateTime.parse("2023-04-11")),
     History(
@@ -192,11 +192,11 @@ abstract class Database {
         desc: "Crop: Cana de açúcar",
         dateTime: DateTime.parse("2023-04-08")),
     History(
-        title: "Image taken! waiting processing",
+        title: "Image taken! Waiting processing",
         desc: "Drone #2 - Conditions suboptimal",
         dateTime: DateTime.parse("2023-04-07")),
     History(
-        title: "Image taken! waiting processing",
+        title: "Image taken! Waiting processing",
         desc: "Drone #2 - Conditions nominal",
         dateTime: DateTime.parse("2023-04-06")),
     History(
@@ -204,7 +204,7 @@ abstract class Database {
         desc: "Crop: Soja",
         dateTime: DateTime.parse("2023-04-03")),
     History(
-        title: "Image taken! waiting processing",
+        title: "Image taken! Waiting processing",
         desc: "Drone #1 - Condition suboptimal",
         dateTime: DateTime.parse("2023-04-05")),
     History(

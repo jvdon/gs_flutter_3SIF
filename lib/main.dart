@@ -1,10 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:gs_flutter/dashboard.dart';
 import 'package:gs_flutter/historic.dart';
 import 'package:gs_flutter/image_gallery.dart';
-import 'package:ionicons/ionicons.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Drone System"),
+          title: Text("Drone System", style: GoogleFonts.poppins(),),
         ),
         body: _telas[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
