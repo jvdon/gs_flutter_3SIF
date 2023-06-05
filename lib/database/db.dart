@@ -176,24 +176,40 @@ abstract class Database {
 
   static List<History> historic = [
     History(
-        title: "Drone Added",
-        desc: "Drone #5 added",
+        title: "Image taken! waiting processing",
+        desc: "Drone #5 - Condition abnormal",
+        dateTime: DateTime.parse("2023-04-11")),
+    History(
+        title: "Drone #5 Added",
+        desc: "Crop: Milho",
         dateTime: DateTime.parse("2023-04-10")),
     History(
-        title: "Drone Added",
-        desc: "Drone #4 added",
+        title: "Image taken! waiting processing",
+        desc: "Drone #3 - Conditions nominal",
+        dateTime: DateTime.parse("2023-04-11")),
+    History(
+        title: "Drone #3 Added",
+        desc: "Crop: Cana de açúcar",
         dateTime: DateTime.parse("2023-04-08")),
     History(
-        title: "Drone Added",
-        desc: "Drone #3 added",
-        dateTime: DateTime.parse("2023-04-05")),
+        title: "Image taken! waiting processing",
+        desc: "Drone #2 - Conditions suboptimal",
+        dateTime: DateTime.parse("2023-04-07")),
     History(
-        title: "Drone Added",
-        desc: "Drone #2 added",
+        title: "Image taken! waiting processing",
+        desc: "Drone #2 - Conditions nominal",
+        dateTime: DateTime.parse("2023-04-06")),
+    History(
+        title: "Drone #2 Added",
+        desc: "Crop: Soja",
         dateTime: DateTime.parse("2023-04-03")),
     History(
-        title: "Drone Added",
-        desc: "Drone #1 added",
+        title: "Image taken! waiting processing",
+        desc: "Drone #1 - Condition suboptimal",
+        dateTime: DateTime.parse("2023-04-05")),
+    History(
+        title: "Drone #1 Added",
+        desc: "Crop: Trigo",
         dateTime: DateTime.parse("2023-04-01")),
   ];
 }
